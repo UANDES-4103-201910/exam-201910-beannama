@@ -1,42 +1,58 @@
-
+<html>
 <div class="topnav">
   <a class="active" style="float:left" href="#home">Z-Mobile</a>
 
-  <a style="float:right" href="#news">Session</a>
-  <a style="float:right" href="#about">Shopping Cart</a>
+  <a style="float:right" href="#session">Session</a>
+  <a style="float:right" href="#shoppingcart">Shopping Cart</a>
 </div>
 
 <header>
-  <h4>THIS IS THE HEADER</h4>
-  <tbody>
 
-  <% @types.each do |type| %>
-    <tr>
-      <td><%= type.typeof %></td>
-    </tr>
-  <% end %>
-  </tbody>
+  <div class='container'>
+    <div class="row">
+      <% @types.each do |type| %>
+          <%= type.typeof %>
+      <% end %>
+    </div>
+  </div>
 </header>
 
 
 
 
-<Main>
-  <h4>THIS IS THE MAIN</h4>
-  <div class="sidebar" style="width:25%">
-    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="sidebar" style="width:25%">
+        <H4>This is the secondary nav</H4>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+      </div>
+
+      <div class="content" style="margin-left:25%">
+        <div class="row">
+          <% @products.each do |product| %>
+            <td><%= product.brand %></td>
+            <td><%= product.model %></td>
+            <td><%= product.variant %></td>
+            <td><%= product.price %></td>
+            <td><%= product.sdescription %></td>
+            <td><%= product.ldescription %></td>
+            <td><%= product.typeof %></td>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="content" style="margin-left:25%">
-    <h4>PAGE CONTENTS</h4>
-  </div>
-</Main>
+</body>
 
 <footer>
   <p>Company: Orenjikun's Company</p>
   <p>Contact information:</p>
   <p>Callcenter: +5691111111</p>
   <P>Address: 742 Evergreen Terrace, Springfield</P>
+
 </footer>
+</html>
