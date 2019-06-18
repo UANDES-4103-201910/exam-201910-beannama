@@ -1,17 +1,28 @@
-<h1>HomeController#index</h1>
-<header>
-  <div class="topnav">
-    <a style="align-content: center" class="active" href="#home">Z-Mobile</a>
 
-    <a style="float:right" href="#news">Session</a>
-    <a style="float:right" href="#about">Shopping Cart</a>
-  </div>
+<div class="topnav">
+  <a class="active" style="float:left" href="#home">Z-Mobile</a>
+
+  <a style="float:right" href="#news">Session</a>
+  <a style="float:right" href="#about">Shopping Cart</a>
+</div>
+
+<header>
+  <h4>THIS IS THE HEADER</h4>
+  <tbody>
+
+  <% @types.each do |type| %>
+    <tr>
+      <td><%= type.typeof %></td>
+    </tr>
+  <% end %>
+  </tbody>
 </header>
 
 
 
 
-<main>
+<Main>
+  <h4>THIS IS THE MAIN</h4>
   <div class="sidebar" style="width:25%">
     <a href="#" class="w3-bar-item w3-button">Link 1</a>
     <a href="#" class="w3-bar-item w3-button">Link 2</a>
@@ -19,9 +30,9 @@
   </div>
 
   <div class="content" style="margin-left:25%">
-    ... page content ...
+    <h4>PAGE CONTENTS</h4>
   </div>
-</main>
+</Main>
 
 <footer>
   <p>Company: Orenjikun's Company</p>
